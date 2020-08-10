@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.StartActivity">
+
+    <TextView
+        android:id="@+id/textViewShield"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Shield Up"
+        android:textColor="#000000"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/animation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:src="@drawable/corona_start_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewShield"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animation_view"
+        app:layout_constraintVertical_bias="0.122"
+        android:layout_margin="@dimen/margin_10"
+        >
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Protect the "
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="32dp"/>
+        <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="World "
+        android:textAlignment="center"
+        android:textColor="#ff0000"
+        android:textSize="32dp" />
+        <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="and your "
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:textSize="32dp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linear_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+        android:layout_margin="@dimen/margin_10">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Family "
+            android:textColor="#ff0000"
+            android:textSize="32dp"/>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From Covid - 19"
+            android:textColor="#000000"
+            android:textSize="32dp" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/arrow"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="24dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout1"
+        app:srcCompat="@drawable/next_arrow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
