@@ -1,6 +1,5 @@
 package com.esq.ecxcoronaapp.ui.bottom_nav
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -42,7 +41,7 @@ class NewsFragment : Fragment() {
         layoutManager.orientation = LinearLayoutManager.VERTICAL
         recyclerView.layoutManager = layoutManager
 
-        viewModel.homeAdapterData.observe(viewLifecycleOwner, Observer {
+        viewModel.newsAdapterData.observe(viewLifecycleOwner, Observer {
             it.let {
                 adapter = NewsFragmentAdapter(activity?.applicationContext!!, it)
                 recyclerView.adapter = adapter
