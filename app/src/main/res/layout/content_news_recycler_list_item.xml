@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="newsList"
+            type="com.esq.ecxcoronaapp.domain.model.NewsListModel" />
+    </data>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#EBEBEB"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageViewForCard"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignTop="@id/title"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/margin_8dp"
+                android:background="#55B2EBF2"
+                android:src='@{newsList.image, default=@drawable/news_images1}'
+                app:civ_border_color="#55B2EBF2"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/margin_8dp"
+                android:layout_toEndOf="@id/imageViewForCard"
+                android:text='@{newsList.news, default=@string/dummy_text}'
+                android:textAllCaps="true"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="@color/dummyTextColor" />
+
+            <TextView
+                android:id="@+id/subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                android:drawableBottom="@color/colorBlack"
+                android:text="@string/learn_more"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                android:textColor="@color/colorBlack"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_below="@id/subtitle"
+                android:layout_alignStart="@id/subtitle"
+                android:layout_alignEnd="@id/subtitle"
+                android:layout_marginBottom="@dimen/margin_8dp"
+                android:background="@color/colorPrimary" />
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
