@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="#55B2EBF2"
+        android:background="#EBEBEB"
         app:cardCornerRadius="8dp"
         app:cardElevation="5dp"
         app:cardPreventCornerOverlap="true">
@@ -23,16 +23,18 @@
             android:layout_height="wrap_content"
             >
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imageViewForCard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_alignTop="@id/title"
                 android:layout_alignBottom="@id/subtitle"
                 android:layout_alignParentStart="true"
                 android:layout_margin="@dimen/margin_8dp"
                 android:background="#55B2EBF2"
-                android:src="@drawable/ic_pie_chart_black_24dp" />
+                android:src="@drawable/card_chart"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#55B2EBF2"/>
 
             <TextView
                 android:id="@+id/title"
