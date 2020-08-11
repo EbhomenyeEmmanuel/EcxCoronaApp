@@ -11,9 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="Shield Up"
+        android:text="@string/shield_up"
         android:textColor="#000000"
-        android:textSize="32dp"
+        android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="350dp"
         android:layout_gravity="center"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/margin_8dp"
+        android:padding="@dimen/margin_8dp"
         android:src="@drawable/corona_start_up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,14 +35,14 @@
         android:id="@+id/linear_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/animation_view"
-        app:layout_constraintVertical_bias="0.122"
-        android:layout_margin="@dimen/margin_10"
-        >
+        app:layout_constraintVertical_bias="0.122">
+
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
@@ -49,35 +50,37 @@
             android:text="Protect the "
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="32dp"/>
-        <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="World "
-        android:textAlignment="center"
-        android:textColor="#ff0000"
-        android:textSize="32dp" />
-        <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="and your "
-        android:textColor="#000000"
-        android:textAlignment="center"
-        android:textSize="32dp"/>
+            android:textSize="@dimen/size30" />
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="World "
+            android:textAlignment="center"
+            android:textColor="#ff0000"
+            android:textSize="@dimen/size30" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="and your "
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="@dimen/size30" />
 
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linear_layout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
         android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linear_layout"
-        android:layout_margin="@dimen/margin_10">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_layout">
 
         <TextView
             android:id="@+id/textView4"
@@ -85,7 +88,7 @@
             android:layout_height="wrap_content"
             android:text="Family "
             android:textColor="#ff0000"
-            android:textSize="32dp"/>
+            android:textSize="32sp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -93,7 +96,7 @@
             android:layout_height="wrap_content"
             android:text="From Covid - 19"
             android:textColor="#000000"
-            android:textSize="32dp" />
+            android:textSize="32sp" />
     </LinearLayout>
 
     <ImageButton
