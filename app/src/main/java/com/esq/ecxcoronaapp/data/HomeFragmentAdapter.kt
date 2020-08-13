@@ -9,7 +9,7 @@ import com.esq.ecxcoronaapp.R
 import com.esq.ecxcoronaapp.databinding.ContentHomeRecyclerListItemBinding
 import com.esq.ecxcoronaapp.domain.model.HomeListModel
 
-class HomeFragmentAdapter(val context: Context, private val homeListInfo: List<HomeListModel>) :
+class HomeFragmentAdapter(private val context: Context, private val homeListInfo: List<HomeListModel>) :
     RecyclerView.Adapter<HomeFragmentAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view =
@@ -35,9 +35,12 @@ class HomeFragmentAdapter(val context: Context, private val homeListInfo: List<H
         RecyclerView.ViewHolder(binding.root) {
         fun setData(homeListModel: HomeListModel?) {
             homeListModel?.let {
-                binding.imageViewForCard.setImageResource(homeListModel.image)
-                binding.title.text = homeListModel.title.toString()
-                binding.subtitle.text = homeListModel.subTitle.toString()
+                with(homeListModel){
+                    binding.imageViewForCard.setImageResource(image)
+                    binding.title.text = title.toString()
+                    binding.subtitle.text = subTitle.toString()
+                }
+
             }
         }
     }
