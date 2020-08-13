@@ -8,20 +8,18 @@
             type="com.esq.ecxcoronaapp.domain.model.HomeListModel" />
     </data>
 
-
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="#EBEBEB"
+        android:backgroundTint="#EBEBEB"
         app:cardCornerRadius="8dp"
         app:cardElevation="5dp"
         app:cardPreventCornerOverlap="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imageViewForCard"
@@ -31,10 +29,9 @@
                 android:layout_alignBottom="@id/subtitle"
                 android:layout_alignParentStart="true"
                 android:layout_margin="@dimen/margin_8dp"
-                android:background="#55B2EBF2"
-                android:src="@drawable/card_chart"
-                app:civ_border_width="2dp"
-                app:civ_border_color="#55B2EBF2"/>
+                android:src='@{homeInfo.image, default=@drawable/card_chart}'
+                app:civ_border_color="#55B2EBF2"
+                app:civ_border_width="2dp" />
 
             <TextView
                 android:id="@+id/title"
@@ -42,28 +39,27 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="@dimen/margin_8dp"
                 android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginTop="@dimen/margin_8dp"
                 android:layout_toEndOf="@id/imageViewForCard"
-                android:text="How it Spreads"
-                android:textAppearance="?attr/textAppearanceSubtitle1"
-                android:textStyle="bold"
+                android:text='@{"₦" + homeInfo.title, default=@string/how_does_it_spread}'
                 android:textAllCaps="true"
-                />
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/title"
+                android:layout_alignParentEnd="true"
                 android:layout_marginStart="@dimen/margin_8dp"
                 android:layout_marginBottom="@dimen/margin_8dp"
-                android:layout_alignParentEnd="true"
-                android:textStyle="normal"
                 android:layout_toEndOf="@id/imageViewForCard"
-                android:text='@{"₦" + homeInfo.subTitle, default="₦8000.00"}'
+                android:text='@{"₦" + homeInfo.subTitle, default=@string/learn_how_covid}'
                 android:textAppearance="?attr/textAppearanceSubtitle2"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="@android:color/darker_gray"
+                android:textStyle="normal" />
         </RelativeLayout>
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 </layout>
