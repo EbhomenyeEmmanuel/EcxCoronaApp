@@ -6,19 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.bottom_nav.HomeFragment">
 
-    <com.airbnb.lottie.LottieAnimationView
+    <ImageView
         android:id="@+id/animation_view"
         android:layout_width="wrap_content"
-        android:layout_height="250dp"
+        android:layout_height="200dp"
         android:layout_margin="10dp"
         android:layout_gravity="center"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/corona_doctor"
+        android:src="@drawable/home_bg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.5"
+        android:contentDescription="@string/home_bg_corona_doctors" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/homeRecyclerView"
