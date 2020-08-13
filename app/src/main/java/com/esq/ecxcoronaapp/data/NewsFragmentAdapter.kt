@@ -9,7 +9,7 @@ import com.esq.ecxcoronaapp.R
 import com.esq.ecxcoronaapp.databinding.ContentNewsRecyclerListItemBinding
 import com.esq.ecxcoronaapp.domain.model.NewsListModel
 
-class NewsFragmentAdapter(val context: Context, private val homeListInfo: List<NewsListModel>) :
+class NewsFragmentAdapter(private val context: Context, private val homeListInfo: List<NewsListModel>) :
     RecyclerView.Adapter<NewsFragmentAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = DataBindingUtil.inflate<ContentNewsRecyclerListItemBinding>(LayoutInflater.from(context), R.layout.content_news_recycler_list_item, parent, false)
@@ -28,8 +28,10 @@ class NewsFragmentAdapter(val context: Context, private val homeListInfo: List<N
     inner class MyViewHolder(private val binding: ContentNewsRecyclerListItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun setData(newsListModel: NewsListModel?) {
             newsListModel?.let {
-                binding.imageViewForCard.setImageResource(newsListModel.image)
-                binding.title.text = newsListModel.toString()
+                with(newsListModel){
+                    binding.imageViewForCard.setImageResource(image)
+                    binding.title.text = news
+                }
             }
         }
     }
