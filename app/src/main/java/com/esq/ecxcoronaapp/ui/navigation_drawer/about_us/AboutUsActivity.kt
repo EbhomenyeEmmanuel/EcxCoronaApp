@@ -11,7 +11,7 @@ import mehdi.sakout.aboutpage.Element
 class AboutUsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        //supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         val versionElement = Element()
         versionElement.title = "Version 1.0"
         val aboutPage: View = AboutPage(this).apply {
