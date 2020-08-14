@@ -35,4 +35,13 @@
     <string name="high">High</string>
     <string name="shield_up">Shield Up</string>
     <string name="home_bg_corona_doctors">Corona Doctors</string>
+    <string name="image_from_news">Image from news</string>
+    <string name="image_for_card">Image for Card</string>
+    <string name="family">Family</string>
+    <string name="from_covid_19">From Covid - 19</string>
+    <string name="red_arrow">Red arrow</string>
+    <string name="and_your">and your</string>
+    <string name="world">World</string>
+    <string name="start_up_picture">Start up picture</string>
+    <string name="protect_the">Protect the</string>
 </resources>
