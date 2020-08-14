@@ -44,4 +44,11 @@
     <string name="world">World</string>
     <string name="start_up_picture">Start up picture</string>
     <string name="protect_the">Protect the</string>
+    <string name="global_statistics">Global Statistics</string>
+    <string name="world_map">World Map</string>
+    <string name="global_update">Global Update</string>
+    <string name="global_update_map">global update map</string>
+    <string name="global_update_map_bottom_arrow">global update map bottom arrow</string>
+    <string name="global_update_graph_2">Global update graph 2</string>
+    <string name="global_update_graph_bottom_arrow">Global update graph bottom arrow</string>
 </resources>
