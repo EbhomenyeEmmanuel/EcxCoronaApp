@@ -15,7 +15,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:padding="@dimen/margin_8dp"
-        android:layout_marginBottom="@dimen/margin_8dp"
         >
 
         <LinearLayout
