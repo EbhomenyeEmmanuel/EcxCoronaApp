@@ -6,47 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".ui.bottom_nav.StatsFragment">
 
-    <TextView
-        android:id="@+id/textView"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_16dp"
-        android:text="@string/global_statistics"
-        android:textColor="@color/colorBlack"
-        android:textSize="32sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/margin_8dp"
+        >
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_16dp"
-        android:layout_marginTop="@dimen/margin_8dp"
-        android:layout_marginEnd="@dimen/margin_16dp"
-        android:background="#EBEBEB"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="5dp"
-        app:cardPreventCornerOverlap="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView">
-
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
-            android:src="@drawable/covid_world_map"
-            android:contentDescription="@string/world_map" />
+            android:orientation="vertical">
 
-    </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_16dp"
+                android:text="@string/global_statistics"
+                android:textColor="@color/colorBlack"
+                android:textSize="32sp"
+                android:textStyle="bold" />
 
-    <include layout="@layout/content_stat_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card1" />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginEnd="@dimen/margin_16dp"
+                android:background="#EBEBEB"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp"
+                app:cardPreventCornerOverlap="true">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/world_map"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/covid_world_map" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <include
+                layout="@layout/content_stat_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
